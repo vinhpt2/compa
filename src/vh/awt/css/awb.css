@@ -1,0 +1,15 @@
+﻿.pan-png { background-image: url("pan.png"); height: 16px; width: 16px }
+.zoomin-png { background-image: url("zoomin.png"); height: 16px; width: 16px }
+.zoomout-png { background-image: url("zoomout.png"); height: 16px; width: 16px }
+.identify-png { background-image: url("identify.png"); height: 16px; width: 16px }
+.select-png { background-image: url("select.png"); height: 16px; width: 16px }
+.unselect-png { background-image: url("unselect.png"); height: 16px; width: 16px }
+.fullextent-png { background-image: url("fullextent.png"); height: 16px; width: 16px }
+.back-png { background-image: url("back.png"); height: 16px; width: 16px }
+.next-png { background-image: url("next.png"); height: 16px; width: 16px }
+.basemap-png { background-image: url("basemap.png"); height: 16px; width: 16px }
+.swipe-png { background-image: url("swipe.png"); height: 16px; width: 16px }
+.transparent-png { background-image: url("transparent.png"); height: 16px; width: 16px }
+.print-png { background-image: url("print.png"); height: 16px; width: 16px }
+.measure-png { background-image: url("measure.png"); height: 16px; width: 16px }
+.help-png { background-image: url("help.png"); height: 16px; width: 16px }

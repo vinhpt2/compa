@@ -1,0 +1,19 @@
+﻿.dojoxGridRowSelected { background-color: yellow}
+.save-png { background-image: url("save.png"); height: 16px; width: 16px }
+.editselect-png { background-image: url("editselect.png"); height: 16px; width: 16px }
+.addto-png { background-image: url("addto.png"); height: 16px; width: 16px }
+.layercontrol-png { background-image: url("layercontrol.png"); height: 16px; width: 16px }
+.attribute-png { background-image: url("attribute.png"); height: 16px; width: 16px }
+.pen-png { background-image: url("pen.png"); height: 16px; width: 16px }
+.autopolygon-png { background-image: url("autopolygon.png"); height: 16px; width: 16px }
+.move-png { background-image: url("move.png"); height: 16px; width: 16px }
+.editvertex-png { background-image: url("editvertex.png"); height: 16px; width: 16px }
+.duplicate-png { background-image: url("duplicate.png"); height: 16px; width: 16px }
+.delete-png { background-image: url("delete.png"); height: 16px; width: 16px }
+.buffer-png { background-image: url("buffer.png"); height: 16px; width: 16px }
+.merge-png { background-image: url("merge.png"); height: 16px; width: 16px }
+.split-png { background-image: url("split.png"); height: 16px; width: 16px }
+.reshape-png { background-image: url("reshape.png"); height: 16px; width: 16px }
+.undo-png { background-image: url("undo.png"); height: 16px; width: 16px }
+.redo-png { background-image: url("redo.png"); height: 16px; width: 16px }
+.property-png { background-image: url("property.png"); height: 16px; width: 16px }

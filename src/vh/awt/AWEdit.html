@@ -1,0 +1,78 @@
+﻿<div>
+<div data-dojo-type="dijit/Toolbar">
+    <div data-dojo-type="dijit/form/DropDownButton" label="Edit">
+        <div data-dojo-type="dijit/Menu">
+            <span data-dojo-type="dijit/MenuItem" data-dojo-attach-point="itmEditBegin" data-dojo-attach-event="onClick:itmEditBegin_onClick">Start editing</span>
+            <span data-dojo-type="dijit/MenuItem" data-dojo-attach-point="itmEditEnd" data-dojo-attach-event="onClick:itmEditEnd_onClick" disabled>Stop editing</span>
+            <span data-dojo-type="dijit/MenuSeparator"></span>
+            <span data-dojo-type="dijit/MenuItem" data-dojo-attach-point="itmEditSave" data-dojo-attach-event="onClick:itmEditSave_onClick" disabled iconClass="save-png">Save edits</span>
+            <span data-dojo-type="dijit/MenuSeparator"></span>
+            <span data-dojo-type="dijit/MenuItem" data-dojo-attach-point="itmEditBeginSession" data-dojo-attach-event="onClick:itmEditBeginSession_onClick">Start editing (session)</span>
+            <span data-dojo-type="dijit/CheckedMenuItem" data-dojo-attach-point="itmEditShowDelete" disabled>Show deleted features</span>
+        </div>
+    </div>
+    <div data-dojo-type="dijit/form/ComboButton" data-dojo-attach-point="toolEditSelect" iconClass="editselect-png" title="Select" showLabel="false">
+        <div data-dojo-type="dijit/Menu">
+            <span group="select" data-dojo-type="dijit/RadioMenuItem" data-dojo-attach-point="itmEditSelectTop" data-dojo-attach-event="onChange:itmEditSelectType_onChange">Top Layer</span>
+            <span group="select" data-dojo-type="dijit/RadioMenuItem" data-dojo-attach-point="itmEditSelectVisible" data-dojo-attach-event="onChange:itmEditSelectType_onChange" checked>Visible Layers</span>
+            <span group="select" data-dojo-type="dijit/RadioMenuItem" data-dojo-attach-point="itmEditSelectAll" data-dojo-attach-event="onChange:itmEditSelectType_onChange">All Layers</span>
+        </div>
+    </div>
+    <input type="button" data-dojo-type="dijit/form/Button" data-dojo-attach-point="cmdEditExtract" data-dojo-attach-event="onClick:cmdEditExtract_onClick" disabled iconClass="addto-png" title="Add to Edit" showLabel="false" />
+    <input type="button" data-dojo-type="dijit/form/Button" data-dojo-attach-point="cmdLayerControl" data-dojo-attach-event="onClick:cmdLayerControl_onClick" disabled iconClass="layercontrol-png" title="Control layers" showLabel="false" />
+    <input type="button" data-dojo-type="dijit/form/Button" data-dojo-attach-point="cmdEditAttribute" data-dojo-attach-event="onClick:cmdEditAttribute_onClick" disabled iconClass="attribute-png" title="Attribute" showLabel="false" />
+    <input type="button" data-dojo-type="dijit/form/Button" data-dojo-attach-point="cmdEditProperty" data-dojo-attach-event="onClick:cmdEditProperty_onClick" iconClass="property-png" title="Property" showLabel="false" />
+    <span data-dojo-type="dijit/ToolbarSeparator"></span>
+    <input type="button" data-dojo-type="dijit/form/ToggleButton" data-dojo-attach-point="toolEditPen" disabled iconClass="pen-png" title="Pen" showLabel="false" />
+    <input type="button" data-dojo-type="dijit/form/ToggleButton" data-dojo-attach-point="toolEditAutoPolygon" disabled iconClass="autopolygon-png" title="Auto Complete Polygon" showLabel="false" />
+    <span data-dojo-type="dijit/ToolbarSeparator"></span>
+    <input type="button" data-dojo-type="dijit/form/Button" data-dojo-attach-point="cmdEditActiveMRS" data-dojo-attach-event="onClick:cmdEditActiveMRS_onClick" disabled iconClass="move-png" title="Move/Rotate/Scale" showLabel="false"/>
+    <input type="button" data-dojo-type="dijit/form/Button" data-dojo-attach-point="cmdEditActiveVertices" data-dojo-attach-event="onClick:cmdEditActiveVertices_onClick" disabled iconClass="editvertex-png" title="Edit Vertices" showLabel="false" />
+    <input type="button" data-dojo-type="dijit/form/Button" data-dojo-attach-point="cmdEditDuplicate" data-dojo-attach-event="onClick:cmdEditDuplicate_onClick" disabled iconClass="duplicate-png" title="Duplicate" showLabel="false" />
+    <input type="button" data-dojo-type="dijit/form/Button" data-dojo-attach-point="cmdEditDelete" data-dojo-attach-event="onClick:cmdEditDelete_onClick" disabled iconClass="delete-png" title="Delete" showLabel="false" />
+    <span data-dojo-type="dijit/ToolbarSeparator"></span>
+    <input type="button" data-dojo-type="dijit/form/Button" data-dojo-attach-point="cmdEditBuffer" data-dojo-attach-event="onClick:cmdEditBuffer_onClick" disabled iconClass="buffer-png" title="Buffer" showLabel="false" />
+    <input type="button" data-dojo-type="dijit/form/Button" data-dojo-attach-point="cmdEditMerge" data-dojo-attach-event="onClick:cmdEditMerge_onClick" disabled iconClass="merge-png" title="Merge" showLabel="false" />
+    <input type="button" data-dojo-type="dijit/form/ToggleButton" data-dojo-attach-point="toolEditSplit" disabled iconClass="split-png" title="Split" showLabel="false" />
+    <input type="button" data-dojo-type="dijit/form/ToggleButton" data-dojo-attach-point="toolEditReshape" disabled iconClass="reshape-png" title="Reshape" showLabel="false" />
+    <span data-dojo-type="dijit/ToolbarSeparator"></span>
+    <input type="button" data-dojo-type="dijit/form/Button" data-dojo-attach-point="cmdEditUndo" data-dojo-attach-event="onClick:cmdEditUndo_onClick" disabled iconClass="undo-png" title="Undo Edit" showLabel="false" />
+    <input type="button" data-dojo-type="dijit/form/Button" data-dojo-attach-point="cmdEditRedo" data-dojo-attach-event="onClick:cmdEditRedo_onClick" disabled iconClass="redo-png" title="Redo Edit" showLabel="false" />
+</div>
+<div data-dojo-type="dijit/Dialog" title="<img src='vh/awt/css/layercontrol.png'/>&nbsp;Layers control" data-dojo-attach-point="winLayerControl" class="modaless">
+    <div data-dojo-type="dijit/layout/TabContainer" style="width:340px;height:400px">
+        <div data-dojo-type="dijit/Fieldset" title="Templates">
+            <div data-dojo-attach-point="divEditTemplate"></div>
+        </div>
+        <div data-dojo-type="dijit/Fieldset" title="Layers">
+            <table data-dojo-type="dojox/grid/DataGrid" data-dojo-attach-point="gridLayerControl" data-dojo-attach-event="onApplyCellEdit:gridLayerControl_onApplyCellEdit" canSort="false" selectionMode="none" style="width:300px;height:300px">
+                <thead>
+                    <tr>
+                        <th field="name" width="150px">Layers</th>
+                        <th field="edit" width="20px" cellType="dojox.grid.cells.Bool" editable="true"><span title="Editable">🖉</span></th>
+                        <th field="visible" width="20px" cellType="dojox.grid.cells.Bool" editable="true"><span title="Visible">☼</span></th>
+                        <th field="select" width="20px" cellType="dojox.grid.cells.Bool" editable="true"><span title="Selectable">⬜</span></th>
+                        <th field="_snap" width="20px" cellType="dojox.grid.cells.Bool" editable="true"><span title="Snapable">♯</span></th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+<div data-dojo-type="dijit/Dialog" title="<img src='vh/awt/css/attribute.png'/>&nbsp;Editing features attribute" data-dojo-attach-point="winEditAttribute" data-dojo-attach-event="onCancel:winEditAttribute_onCancel" class="modaless">
+    <div class="dijitDialogPaneContentArea">
+        <label>Layer: </label>
+        <select data-dojo-type="dijit/form/Select" data-dojo-attach-point="cboAttributeLayer" data-dojo-attach-event="onChange:cboAttributeLayer_onChange"></select>
+        <label>&nbspSelected only: </label>
+        <input type="checkbox" data-dojo-type="dijit/form/CheckBox" data-dojo-attach-point="chkAttributeSelectedOnly" checked data-dojo-attach-event="onChange:chkAttributeSelectedOnly_onChange"/> 
+        <div data-dojo-type="dojox/grid/DataGrid" data-dojo-attach-point="gridEditAttribute" data-dojo-attach-event="onSelectionChanged:gridEditAttribute_onSelectionChanged" style="width:650px;height:400px"></div>
+        <em data-dojo-attach-point="labAttribute" style="float:right"></em>
+    </div>
+</div>
+<div data-dojo-type="dijit/Dialog" title="<img src='vh/awt/css/property.png'/>&nbsp;Edit Property" data-dojo-attach-point="winEditProperty" data-dojo-attach-event="onCancel:winEditProperty_onCancel" class="modaless">
+    <div class="dijitDialogPaneContentArea">
+        <span style="float:right"><label>Show Attachment</label><input data-dojo-type="dijit/form/CheckBox" checked data-dojo-attach-point="chkShowPropertyAttachment" data-dojo-attach-event="onChange:chkShowPropertyAttachment_onChange"/></span>
+        <div data-dojo-attach-point="divEditProperty"></div>
+    </div>
+</div>
+</div>

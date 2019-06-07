@@ -1,0 +1,31 @@
+﻿<div>
+<div data-dojo-type="dijit/Toolbar">
+    <div data-dojo-type="dijit/form/DropDownButton" label="Snap">
+        <div data-dojo-type="dijit.TooltipDialog" >
+            <fieldset data-dojo-type="dijit/Fieldset" title="Setting" data-dojo-attach-point="panSnapSetting">
+				<table>
+					<tr><td><label>Tolerence: </label></td><td><input disabled data-dojo-type="dijit/form/NumberSpinner" data-dojo-attach-point="txtSnapTolerence" data-dojo-attach-event="onChange:txtSnapTolerence_onChange" value="3" style="width:105px"/></td></tr>
+					<tr><td><label>Activate: </label></td><td><select disabled data-dojo-type="dijit/form/Select" data-dojo-attach-point="cboSnapActivate" data-dojo-attach-event="onChange:cboSnapActivate_onChange" style="width:105px">
+						<option selected value="A">Always</option>
+						<option value="C">Pressing [Ctrl]</option>
+					</select></td></tr>
+					<tr><td><label>Style: </label></td><td><select disabled data-dojo-type="dijit/form/Select" data-dojo-attach-point="cboSnapStyle" data-dojo-attach-event="onChange:cboSnapStyle_onChange" style="width:105px">
+						<option value="circle">○ circle</option>
+                        <option selected value="square">□ square</option>
+						<option value="cross">+ cross</option>
+						<option value="diamond">◊ diamond</option>
+						<option value="x">x markX</option>
+					</select></td></tr>
+					<tr><td><label>Color: </label></td><td><div disabled data-dojo-type="dijit/form/DropDownButton" data-dojo-attach-point="butSnapColor" style="width:100px;color:red" label="██████">
+						<div data-dojo-type="dijit/ColorPalette" data-dojo-attach-point="palSnapColor" data-dojo-attach-event="onChange:palSnapColor_onChange"></div>
+					</div></td></tr>
+				</table>
+            </fieldset>
+        </div>
+    </div>
+    <input type="checkbox" data-dojo-type="dijit/form/CheckBox" data-dojo-attach-point="chkSnapEnable" data-dojo-attach-event="onChange:chkSnapEnable_onChange" title="Enable Spapping"/>
+    <span data-dojo-type="dijit/ToolbarSeparator"></span>
+	<input group="_snap" type="button" disabled data-dojo-type="dijit/form/ToggleButton" data-dojo-attach-point="cmdSnapPoint" checked iconClass="snappoint-png" title="Snap to point" showLabel="false" />
+    <input group="_snap" type="button" disabled data-dojo-type="dijit/form/ToggleButton" data-dojo-attach-point="cmdSnapVertex" checked iconClass="snapvertex-png" title="Snap to vertex" showLabel="false" />
+    <input group="_snap" type="button" disabled data-dojo-type="dijit/form/ToggleButton" data-dojo-attach-point="cmdSnapEdge" checked iconClass="snapedge-png" title="Snap to edge" showLabel="false" />  
+</div>

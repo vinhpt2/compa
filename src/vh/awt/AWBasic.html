@@ -1,0 +1,65 @@
+﻿<div>
+<div data-dojo-type="dijit/Toolbar">
+    <input type="button" data-dojo-type="dijit/form/Button" data-dojo-attach-point="toolPan" iconClass="pan-png" title="Pan" showLabel="false"/>
+    <input type="button" data-dojo-type="dijit/form/Button" data-dojo-attach-point="toolZoomIn" iconClass="zoomin-png" title="Zoom In" showLabel="false"/>
+    <input type="button" data-dojo-type="dijit/form/Button" data-dojo-attach-point="toolZoomOut" iconClass="zoomout-png" title="Zoom Out" showLabel="false"/>
+    <input type="button" data-dojo-type="dijit/form/Button" data-dojo-attach-point="toolIdentify" iconClass="identify-png" title="Identify" showLabel="false"/>
+    <span data-dojo-type="dijit/ToolbarSeparator"></span>
+    <div data-dojo-type="dijit/form/ComboButton" data-dojo-attach-point="toolSelect" iconClass="select-png" title="Select" showLabel="false">
+        <div data-dojo-type="dijit/Menu">
+            <span group="select" data-dojo-type="dijit/RadioMenuItem" data-dojo-attach-point="itmSelectTop" data-dojo-attach-event="onChange:itmSelectType_onChange">Top Layer</span>
+            <span group="select" data-dojo-type="dijit/RadioMenuItem" data-dojo-attach-point="itmSelectVisible" data-dojo-attach-event="onChange:itmSelectType_onChange" checked>Visible Layers</span>
+            <span group="select" data-dojo-type="dijit/RadioMenuItem" data-dojo-attach-point="itmSelectAll" data-dojo-attach-event="onChange:itmSelectType_onChange">All Layers</span>
+        </div>
+    </div>
+    <input type="button" data-dojo-type="dijit/form/Button" data-dojo-attach-point="cmdUnSelect" data-dojo-attach-event="onClick:cmdUnSelect_onClick" iconClass="unselect-png" title="Clear Select" showLabel="false"/>
+    <span data-dojo-type="dijit/ToolbarSeparator"></span>
+    <input type="button" data-dojo-type="dijit/form/Button" data-dojo-attach-point="cmdFullExtent" data-dojo-attach-event="onClick:cmdFullExtent_onClick" iconClass="fullextent-png" title="Full Extent" showLabel="false" />
+    <label>Scale 1/</label>
+    <input data-dojo-type="dijit/form/NumberTextBox" data-dojo-attach-point="txtScale" data-dojo-attach-event="onChange:txtScale_onChange" style="width:80px"/>
+    <input type="button" data-dojo-type="dijit/form/Button" data-dojo-attach-point="cmdBackExtent" data-dojo-attach-event="onClick:cmdBackExtent_onClick" disabled iconClass="back-png" title="Back Extent" showLabel="false" />
+    <input type="button" data-dojo-type="dijit/form/Button" data-dojo-attach-point="cmdNextExtent" data-dojo-attach-event="onClick:cmdNextExtent_onClick" disabled iconClass="next-png" title="Next Extent" showLabel="false" />
+    <span data-dojo-type="dijit/ToolbarSeparator"></span>
+    <div type="button" data-dojo-type="dijit/form/DropDownButton" data-dojo-attach-point="cmdBasemap" iconClass="basemap-png" title="Basemap" showLabel="false">
+        <div data-dojo-type="dijit/Menu" data-dojo-attach-point="mnuBaseMap"></div>
+    </div>
+    <div data-dojo-type="dijit/form/ComboButton" data-dojo-attach-point="toolSwipe" iconClass="swipe-png" title="Swipe" showLabel="false">
+        <div data-dojo-type="dijit/Menu" data-dojo-attach-point="mnuSwipe"></div>
+    </div>
+    <input type="button" data-dojo-type="dijit/form/ToggleButton" data-dojo-attach-point="cmdTransparent" data-dojo-attach-event="onChange:cmdTransparent_onChange" iconClass="transparent-png" title="Transparent" showLabel="false" />
+    <span data-dojo-type="dijit/ToolbarSeparator"></span>
+    <div type="button" data-dojo-type="dijit/form/ComboButton" data-dojo-attach-point="toolMeasure" iconClass="measure-png" title="Measure" showLabel="false">
+        <div data-dojo-type="dijit/Menu">
+            <span group="measure" data-dojo-type="dijit/RadioMenuItem" data-dojo-attach-point="itmMeasureLocation" data-dojo-attach-event="onChange:itmMeasureType_onChange">Location</span>
+            <span group="measure" checked data-dojo-type="dijit/RadioMenuItem" data-dojo-attach-point="itmMeasureLength" data-dojo-attach-event="onChange:itmMeasureType_onChange">Length</span>
+            <span group="measure" data-dojo-type="dijit/RadioMenuItem" data-dojo-attach-point="itmMeasureArea" data-dojo-attach-event="onChange:itmMeasureType_onChange">Area</span>
+        </div>
+    </div>
+    <div data-dojo-type="dijit/form/DropDownButton" iconClass="print-png" title="Print Map" showLabel="false" >
+        <div data-dojo-type="dijit/Menu" data-dojo-attach-point="mnuPrintMap"></div>
+    </div>
+    <span data-dojo-type="dijit/ToolbarSeparator"></span>
+    <input type="button" data-dojo-type="dijit/form/Button" data-dojo-attach-point="cmdHelp" data-dojo-attach-event="onClick:cmdHelp_onClick" iconClass="help-png" title="Help" showLabel="false" />
+</div>
+
+<div data-dojo-type="dijit/Dialog" title="<img src='vh/awt/css/identify.png'/>&nbsp;Identify" data-dojo-attach-point="winIdentify" class="modaless">
+    <div class="dijitDialogPaneContentArea">
+        <strong data-dojo-attach-point="labIdentifyLayer"></strong>
+        <table data-dojo-type="dojox/grid/DataGrid" data-dojo-attach-point="gridIdentify" style="width:300px;height:300px" >
+            <thead>
+                <tr>
+                    <th field="field" width="125px">Field</th>
+                    <th field="value" width="140px">Value</th>
+                </tr>
+            </thead>
+        </table>
+        <em data-dojo-attach-point="labIdentifyLocation" style="float:right"></em>
+    </div>
+</div>
+
+<div data-dojo-type="dijit/Dialog" title="<img src='vh/awt/css/measure.png'/>&nbsp;Measure" data-dojo-attach-point="winMeasure" class="modaless">
+    <div class="dijitDialogPaneContentArea">
+        <label data-dojo-attach-point="labMeasure"></label>
+    </div>
+</div>
+</div>

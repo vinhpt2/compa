@@ -1,0 +1,15 @@
+﻿.extract-png { background-image: url("extract.png"); height: 16px; width: 16px }
+.drawselect-png { background-image: url("drawselect.png"); height: 16px; width: 16px }
+.copy-png { background-image: url("copy.png"); height: 16px; width: 16px }
+.erase-png { background-image: url("erase.png"); height: 16px; width: 16px }
+.break-png { background-image: url("break.png"); height: 16px; width: 16px }
+.join-png { background-image: url("join.png"); height: 16px; width: 16px }
+.edge-png { background-image: url("edge.png"); height: 16px; width: 16px }
+.pin-png { background-image: url("pin.png"); height: 16px; width: 16px }
+.eke-png { background-image: url("eke.png"); height: 16px; width: 16px }
+.compa-png { background-image: url("compa.png"); height: 16px; width: 16px }
+.text-png { background-image: url("text.png"); height: 16px; width: 16px }
+.label-png { background-image: url("label.png"); height: 16px; width: 16px }
+.xy-png { background-image: url("xy.png"); height: 16px; width: 16px }
+.undo-png { background-image: url("undo.png"); height: 16px; width: 16px }
+.redo-png { background-image: url("redo.png"); height: 16px; width: 16px }

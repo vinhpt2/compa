@@ -1,0 +1,76 @@
+﻿<!DOCTYPE HTML>
+<html class="full">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>AWETool-ce.3x</title>
+    <link rel="icon" type="image/gif" href="vh/awt/css/logo.png"/>
+    <link rel="stylesheet" type="text/css" href="https://js.arcgis.com/3.28/esri/css/esri.css"/>
+    <link rel="stylesheet" type="text/css" href="https://js.arcgis.com/3.28/dijit/themes/claro/claro.css"/>
+    <style>
+        .full{ width:100%;height:100% }
+    </style>
+</head>
+<body class="full claro">
+    <div id="divAWX"></div>
+    <div id="divMap" class="full"></div>
+</body>
+    <script type="text/javascript">
+        var dojoConfig = {
+            async:true,
+            parseOnLoad: true,
+            packages: [{
+                name: "vh",
+                location: window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/')) + "/vh"
+            }]
+        };
+        var editor;
+    </script>
+
+    <script src="https://js.arcgis.com/3.28/" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        require([
+            "esri/map",
+            "esri/layers/ArcGISDynamicMapServiceLayer",
+            "esri/layers/GraphicsLayer",
+            "esri/toolbars/edit",
+            "esri/toolbars/draw",
+            "esri/tasks/GeometryService",
+            "vh/awt/AWToolbox",
+            "vh/awt/AWBasic",
+            "vh/awt/AWEdit",
+            "vh/awt/AWSnap"
+        ], function () {
+
+            var map = new esri.Map("divMap");
+            var dynamicLayer = new esri.layers.ArcGISDynamicMapServiceLayer("https://sampleserver6.arcgisonline.com/arcgis/rest/services/Wildfire/MapServer", { id: "Wildfire" });
+            map.addLayer(dynamicLayer);
+
+            var graphicLayerSketch = new esri.layers.GraphicsLayer();
+            map.addLayer(graphicLayerSketch);
+
+            var graphicLayer = new esri.layers.GraphicsLayer();
+            map.addLayer(graphicLayer);
+
+            var geometryService = new esri.tasks.GeometryService(vh.awt.URL_ARCGISONLINE_GEOMETRY_SERVICE);
+            var edit = new esri.toolbars.Edit(map);
+            var draw = new esri.toolbars.Draw(map, { showTooltips: false });
+
+            var conf = {
+                map: map,
+                dynamicLayer: dynamicLayer,
+                graphicLayer: graphicLayer,
+                graphicLayerSketch: graphicLayerSketch,
+                geometryService: geometryService, edit: edit, draw: draw
+            };
+
+            var awx = new vh.awt.AWToolbox(conf, "divAWX");
+            awx.loadAWWidget(vh.awt.AWBasic, true);
+            awx.loadAWWidget(vh.awt.AWEdit, true);
+            awx.loadAWWidget(vh.awt.AWSnap, false);
+            awx.displayToolbox();
+        });
+    </script>
+
+</html>
