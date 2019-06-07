@@ -1,6 +1,7 @@
 # compa
 Advanced Web-map Editor Tools for Esri ArcGIS Javascript API (COMPA)
-<a href="http://compa.awetool.com/demo" target="_blank"><b>D E M O</b><br /><img src='src/screen0.png'/></a>
+<br/>
+<a href="http://compa.awetool.com/demo" target="_blank"><b>D E M O</b><br/><img src='screen0.png'/></a>
 <table>
             <tr><td rowspan="9" style="text-align:center"><a href="http://awetool.com" target="_blank"><img src='src/vh/awt/css/logo96.png'/><br /><i>http://awetool.com</i></a></td>
             <td><h3 style="background-color:gold">&nbsp;<a href="http://compa.awetool.com" target="_blank">COMPA</a><i><sup> ce.3x</sup> - v1.0.β</i></h3></td></tr>
