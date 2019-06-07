@@ -1,7 +1,7 @@
 # COMPA
 <b>Advanced Web-map Editor Tools for Esri ArcGIS Javascript API</b>
 <br/><br/>
-<a href="http://compa.awetool.com/demo" target="_blank"><b>D E M O</b><br/><br/><img src='screen0.png'/></a>
+<a href="http://qldd.matmagoc.com:9000/compa" target="_blank"><b>D E M O</b><br/><br/><img src='screen0.png'/></a>
 <br/>
 <table>
             <tr><td rowspan="9" style="text-align:center"><a href="http://awetool.com" target="_blank"><img src="src/vh/awt/css/logo96.png"/><br/><i>http://awetool.com</i></a></td>
