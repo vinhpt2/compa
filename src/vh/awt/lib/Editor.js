@@ -1,4 +1,4 @@
-﻿if (!vh) var vh = {};
+if (!vh) var vh = {};
 if (!vh.awt) vh.awt = {};
 
 //Editor - Thư viện edit
@@ -324,9 +324,9 @@ vh.awt.Editor = (function () {
                 polygons[i] = result.features[i].geometry;
 
             if (polygons.length > 0)
-                this._conf.geometryService.autoComplete(polygons, [polyline], function (polygons) {
+                that._conf.geometryService.autoComplete(polygons, [polyline], function (polygons) {
                     if (polygons.length > 0) {
-                        var ptype = this.editTemplate.template.prototype;
+                        var ptype = that.editTemplate.template.prototype;
                         var newFeats = [];
                         for (var i = 0; i < polygons.length; i++) {
                             newFeats[i] = new esri.Graphic(polygons[i], undefined, dojo.clone(ptype.attributes), ptype.infoTemplate);
@@ -334,12 +334,12 @@ vh.awt.Editor = (function () {
                             layer._mode.drawFeature(newFeats[i]);
                         }
 
-                        this.undos.push({ features: newFeats, action: ACTION_INSERT });
+                        that.undos.push({ features: newFeats, action: ACTION_INSERT });
                         //that._insertFeatures(newFeats);
-                        this._selectFeatures(newFeats);
-                        this.eventUseEdit(vh.awt.Editor.EDIT_DIRTY);
+                        that._selectFeatures(newFeats);
+                        that.eventUseEdit(vh.awt.Editor.EDIT_DIRTY);
                     }
-                }, this._errorHandler);
+                }, that._errorHandler);
 
         }, this._errorHandler);
     }
