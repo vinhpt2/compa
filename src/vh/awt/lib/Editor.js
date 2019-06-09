@@ -264,22 +264,22 @@ vh.awt.Editor = (function () {
         }
     }
 
-    Editor.prototype._editor_onVertexMoveStart = function (evt) {
-        if (that._conf._curTool.dojoAttachPoint == "toolEditSelect" && evt.vertexinfo) {
-            evt.graphic.cloneGeometry = dojo.clone(evt.graphic.geometry);
-        }
-    }
-
     Editor.prototype._editor_onMoveRotateScaleStop = function (evt) {
-        if (that._conf._curTool.dojoAttachPoint == "toolEditSelect" && (evt.vertexinfo || evt.transform)) {
+        if (that._conf._curTool.dojoAttachPoint == "toolEditSelect" && (evt.info || (evt.transform && Object.keys(evt.transform).length > 0))) {
             that.undos.push({ features: [evt.graphic], geometries: [evt.graphic.cloneGeometry], action: ACTION_UPDATE });
             that.eventUseEdit(vh.awt.Editor.EDIT_DIRTY);
             //UI.activeCurTool();
         }
     }
 
+    Editor.prototype._editor_onVertexMoveStart = function (evt) {
+        if (that._conf._curTool.dojoAttachPoint == "toolEditSelect" && evt.vertexinfo) {
+            evt.graphic.cloneGeometry = dojo.clone(evt.graphic.geometry);
+        }
+    }
+
     Editor.prototype._editor_onVertexMoveStop = function (evt) {
-        if (that._conf._curTool.dojoAttachPoint == "toolEditSelect" && (evt.vertexinfo || evt.transform)) {
+        if (that._conf._curTool.dojoAttachPoint == "toolEditSelect" && (evt.vertexinfo || (evt.transform && Object.keys(evt.transform).length > 0))) {
             that.undos.push({ features: [evt.graphic], geometries: [evt.graphic.cloneGeometry], action: ACTION_UPDATE });
             that.eventUseEdit(vh.awt.Editor.EDIT_DIRTY);
             //UI.activeCurTool();
