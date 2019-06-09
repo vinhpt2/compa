@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -20,7 +20,7 @@
     <tr><td align="center">
         Snaps<br/><img src="vh/awt/css/awsnap.png" /></td><td>Show/hide snap toolbar</td></tr>
     <tr><td align="center">
-        Draws*<br/><img src="vh/awt/css/awdraw.png" /></td><td>Show/hide draw toolbar</td></tr>
+        Draws<mark>*</mark><br/><img src="vh/awt/css/awdraw.png" /></td><td>Show/hide draw toolbar</td></tr>
 </table>
 <br/>
 <h2>COMPA - Basic toolbar</h2>
@@ -79,14 +79,15 @@
         <i>- Start editing: </i>Check-out selected features and begin new edit-trasaction<br/>
         <i>- Stop editing: </i>Stop current edit-trasaction<br/>
         <i>- Save edits: </i>Save edits in current trasaction to server<br/>
-        <i>- Start editing (session)*: </i>Begin new edit-trasaction in longtime session<br/>
-        <i>- Show deleted features*: </i>Show/hide deleted features of current longtime session<br />
+        <i>- Start editing (session)<mark>*</mark>: </i>Begin new edit-trasaction in longtime session<br/>
+        <i>- Show deleted features<mark>*</mark>: </i>Show/hide deleted features of current longtime session<br />
         <img src="images/screen13.png" /><br />
-        5 features are checked-out for editing
+        <i>check-out 5 features editing</i>
     </td></tr>
     <tr><td align="center">
         Edit Select<br/><img src="images/screen12.png" /></td><td>Selection tool in edit mode<i> (mark as green)</i><br/>
-        <i>(see Select tool for layer options)</i></td></tr>
+        <img src="images/screen21.png" /><br />
+        <i>(click to select only one feature, see Select tool for layer options)</i></td></tr>
     <tr><td align="center">
         Add to Edit<br/><img src="vh/awt/css/addto.png" /></td><td>Add selected features to current edit-transaction</td></tr>
     <tr><td align="center">
@@ -111,25 +112,61 @@
         <i>click on map to draw, double-click to finish</i>
         </td></tr>
     <tr><td align="center">
-        Auto-complete Polygon<br/><img src="vh/awt/css/autopolygon.png" /></td><td>Create new polygon that adjacent (auto-complete) to exist polygons<i> (draw a polyline has start-point and end-point touch exist polygons)<br />
+        Auto-complete Polygon<br/><img src="vh/awt/css/autopolygon.png" /></td><td>Create new polygon that adjacent (auto-complete) to exist polygons<i> (draw a polyline has start & end point touch exist polygons)</i><br />
         <img src="images/screen18.png" />
         </i></td></tr>
     <tr><td align="center">Move/Rotate/Scale<br/>
-        <img src="vh/awt/css/move.png" /></td><td>Move, rotate and scale selected feature<i> (can click on selected feature to active)</i><br />
+        <img src="vh/awt/css/move.png" /></td><td>Move, rotate and scale selected feature<i> (can click on selected feature to activate)</i><br />
         <img src="images/screen19.png" /><br />
         <i>use anchor point to manipulate</i>
         </td></tr>
-    <tr><td align="center"><br/></td><td></td></tr>
-    <tr><td align="center"><br/></td><td></td></tr>
-    <tr><td align="center"><br/></td><td></td></tr>
-    <tr><td align="center"><br/></td><td></td></tr>
-    <tr><td align="center"><br/></td><td></td></tr>
-    <tr><td align="center"><br/></td><td></td></tr>
-    <tr><td align="center"><br/></td><td></td></tr>
-    <tr><td align="center"><br/></td><td></td></tr>
-    <tr><td align="center"><br/></td><td></td></tr>
-    <tr><td align="center"><br/></td><td></td></tr>
-    <tr><td align="center"><br/></td><td></td></tr>
+    <tr><td align="center">
+        Edit Vertices<br/><img src="vh/awt/css/editvertex.png" /></td><td>Edit each vertices of feature<i> can double-click on selected feature to activate</i><br />
+        <img src="images/screen20.png" /><br />
+        <i>drag vertex to move, drag ghost-vertex to add new vertex</i>
+        </td></tr>
+    <tr><td align="center">Duplicate<br/>
+        <img src="vh/awt/css/duplicate.png" /></td><td>Duplicate selected features</td></tr>
+    <tr><td align="center">Delete<br/>
+        <img src="vh/awt/css/delete.png" /></td><td>Delete selected features</td></tr>
+    <tr><td align="center">Buffer<br/>
+        <img src="vh/awt/css/buffer.png" /></td><td>Buffer selected feature by distance<i> (negative value to narrow)</i><br />
+        <img src="images/screen22.png" />
+    </td></tr>
+    <tr><td align="center">Merge<br/>
+        <img src="vh/awt/css/merge.png" /></td><td>Merge adjacent selected features<br />
+        <img src="images/screen24.png" /></td></tr>
+    <tr><td align="center">Split<br/>
+        <img src="vh/awt/css/split.png" /></td><td>Split selected features by a cut-polyline<i> (turn on snapping for accurate measure)</i><br />
+        <img src="images/screen23.png" />
+        </td></tr>
+    <tr><td align="center">Reshape<br/>
+        <img src="vh/awt/css/reshape.png" /></td><td>Reshape selected feature by a edge-polyline<i> (draw a polyline that touch selected feature)</i><br />
+        <img src="images/screen25.png" /><br />
+        <i>turn on snapping for accurate measure</i></td></tr>
+    <tr><td align="center">Undo<br/>
+        <img src="vh/awt/css/undo.png" /></td><td>Undo recent edit</td></tr>
+    <tr><td align="center">Redo<br/>
+        <img src="vh/awt/css/redo.png" /></td><td>Redo recent undo-edit</td></tr>
 </table>
+<br/>
+<h2>COMPA - Snap toolbar</h2>
+<h3><img src="images/screen26.png" /></h3>
+<table border="1">
+    <tr><td align="center">
+        Snap Settings<br/><img src="images/screen27.png" /></td><td><u>Settings snap environment</u><br/>
+        <i>- Tolerence: </i>Tolerence distance of snap<br />
+        <i>- Activate: </i>Activate snap always/pressing Ctrl<br />
+        <i>- Style: </i>Shape of snap point<br />
+        <i>- Color: </i>Color of snap point<br />
+        </td></tr>
+    <tr><td align="center">
+        Enable Snap<br/><img src="images/screen28.png" /></td><td>Check/uncheck to turn on/off snapping</td></tr>
+    <tr><td align="center">
+        Snap Point<br/><img src="vh/awt/css/snappoint.png" /></td><td>Snap to point yes/no</td></tr>
+    <tr><td align="center">
+        Snap Vertex<br/><img src="vh/awt/css/snapvertex.png" /></td><td>Snap to vertex yes/no</td></tr>
+    <tr><td align="center">
+        Snap Edge<br/><img src="vh/awt/css/snapedge.png" /></td><td>Snap to edge yes/no</td></tr>
 </body>
 </html>
