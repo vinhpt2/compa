@@ -13,7 +13,7 @@
 </head>
 <body class="full claro">
     <div id="divAWX"></div>
-    <div id="divMap" class="full"></div>
+    <div id="divMap" oncontextmenu="return false" class="full"></div>
 </body>
     <script type="text/javascript">
         var dojoConfig = {
@@ -26,9 +26,7 @@
         };
         var editor;
     </script>
-
     <script src="https://js.arcgis.com/3.28/" type="text/javascript"></script>
-
     <script type="text/javascript">
         require([
             "esri/map",
@@ -42,7 +40,6 @@
             "vh/awt/AWEdit",
             "vh/awt/AWSnap"
         ], function () {
-
             var map = new esri.Map("divMap");
             var dynamicLayer = new esri.layers.ArcGISDynamicMapServiceLayer("https://sampleserver6.arcgisonline.com/arcgis/rest/services/Wildfire/MapServer", { id: "Wildfire" });
             map.addLayer(dynamicLayer);
@@ -72,5 +69,4 @@
             awx.displayToolbox();
         });
     </script>
-
 </html>
