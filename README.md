@@ -14,4 +14,6 @@
             <tr><td><hr/></td></tr>
             <tr><td>Email: <i><a style="color:gold" href="mailto:vinhptfpt@gmail.com" target="_blank">vinhptfpt@gmail.com</i></td></tr>
             <tr><td>Edition <b>COMPA<i><sup> Pro.3x</sup> - <a href="http://yellowcompa.com/pro" target="_blank">http://yellowcompa.com/pro</a></i></b></td></tr>
-        </table>
+</table>
+<br/><br/>
+<a href="http://qldd.matmagoc.com:9000/compa/help.html" target="_blank"><b>H E L P</b></a>        
