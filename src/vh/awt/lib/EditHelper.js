@@ -1,4 +1,4 @@
-﻿if (!vh) var vh = {};
+if (!vh) var vh = {};
 if (!vh.awt) vh.awt = {};
 
 //EditHelper - Công cụ trợ giúp khi edit
@@ -17,8 +17,6 @@ vh.awt.EditHelper = (function () {
 
         //init context menu
         this.popupEdge = new dijit.Menu();
-        this.popupEdge.addChild(new dijit.MenuItem({ iconClass: "close-png", label: "Close" }));
-        this.popupEdge.addChild(new dijit.MenuSeparator());
         this.popupEdge.addChild(new dijit.MenuItem({
             label: "Add vertex",
             onClick: function () {
@@ -42,6 +40,8 @@ vh.awt.EditHelper = (function () {
                 })
             }
         }));
+        this.popupEdge.addChild(new dijit.MenuSeparator());
+        this.popupEdge.addChild(new dijit.MenuItem({ iconClass: "close-png", label: "Close" }));
         this.popupEdge.startup();
 
         this.popupVertex = new dijit.Menu();
