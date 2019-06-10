@@ -112,6 +112,27 @@
         <i>click on map to draw, double-click to finish</i>
         </td></tr>
     <tr><td align="center">
+        Draw Helper<br /><img src="images/screen29.png" /></td><td>Context menu helper when drawing new feature<i> (right-click while drawing to show helper menu)</i><br />
+        <u>Draw Helper menu</u><i> (can combine helper actions in pair example: length-parallel, length-length, extend-perpendicular...)</i><br />
+        <i>- Close: </i>Close helper menu<br />
+        <i>- Finish: </i>Finish drawing feature<br />
+        <i>- Undo: </i>Undo recent add-vertex of draw<br />
+        <i>- Cancel: </i>Abort drawing feature<br />
+        <i>- Length: </i>Determine length of next drawing edge<br />
+        <img src="images/screen30.png" /><br />
+        <i>- Angle: </i>Determine angle of next drawing edge<br />
+        <img src="images/screen31.png" /><br />
+        <i>- Parallel: </i>Draw next edge parallel with snap edge. If no snap edge will parallel with current edge<br />
+        <img src="images/screen32.png" /><br />
+        <i>- Perpendicular: </i>Draw next edge perpendicular with snap edge. If no snap edge will perpendicular with current edge<br />
+        <img src="images/screen33.png" /><br />
+        <i>- Extend: </i>Draw next edge is an extend of current edge<br />
+        <img src="images/screen34.png" /><br />
+        <i>- At X, Y: </i>Draw next vertex at X, Y coordinates<br />
+        <img src="images/screen35.png" /><br />
+        <i>- More: </i>Not yet implemented!
+        </td></tr>
+    <tr><td align="center">
         Auto-complete Polygon<br/><img src="vh/awt/css/autopolygon.png" /></td><td>Create new polygon that adjacent (auto-complete) to exist polygons<i> (draw a polyline has start & end point touch exist polygons)</i><br />
         <img src="images/screen18.png" />
         </i></td></tr>
@@ -124,6 +145,24 @@
         Edit Vertices<br/><img src="vh/awt/css/editvertex.png" /></td><td>Edit each vertices of feature<i> can double-click on selected feature to activate</i><br />
         <img src="images/screen20.png" /><br />
         <i>drag vertex to move, drag ghost-vertex to add new vertex</i>
+        </td></tr>
+    <tr><td align="center">
+        Edit Helper<i> (<img src="images/screen39.png" /> vertex)</i><br/><img src="images/screen36.png" /></td><td>Context menu helper when editing vertices - black vertices<i> (right-click while editing vertex to show helper menu)</i><br />
+        <u>Vertex Edit Helper menu</u><br />
+        <i>- Delete vertex: </i>Delete pointed vertex<br />
+        <i>- Move vertex to X, Y: </i>Move pointed vertex to X, Y coordinates<br />
+        <img src="images/screen41.png" /><br />
+        <i>- Shift vertex dX, dY: </i>Shift pointed vertex a dX, dY distances<br />
+        <i>- Close: </i>Close helper menu
+        </td></tr>
+    <tr><td align="center">
+        Edit Helper<i> (<img src="images/screen40.png" /> ghost-vertex)</i><br/><img src="images/screen37.png" /></td><td>Context menu helper when editing ghost-vertices - white vertices<i> (right-click while editing ghost-vertex to show helper menu)</i><br />
+        <u>Ghost-vertex Edit Helper menu</u><br />
+        <i>- Add vertex: </i>Add new vertex at pointed ghost-vertex<br />
+        <i>- Add vertex at X, Y: </i>Add new vertex at X, Y coordinates<br />
+        <i>- Edge length: </i>Change length of pointed edge base on base point<i> (negative value to base on red-point)</i><br />
+        <img src="images/screen38.png" /><br />
+        <i>- Close: </i>Close helper menu<br />
         </td></tr>
     <tr><td align="center">Duplicate<br/>
         <img src="vh/awt/css/duplicate.png" /></td><td>Duplicate selected features</td></tr>
