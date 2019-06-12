@@ -40,7 +40,7 @@
             "vh/awt/AWEdit",
             "vh/awt/AWSnap"
         ], function () {
-            var map = new esri.Map("divMap");
+            var map = new esri.Map("divMap", {basemap:"topo"});
             var dynamicLayer = new esri.layers.ArcGISDynamicMapServiceLayer("https://sampleserver6.arcgisonline.com/arcgis/rest/services/Wildfire/MapServer", { id: "Wildfire" });
             map.addLayer(dynamicLayer);
 

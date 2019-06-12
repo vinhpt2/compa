@@ -51,7 +51,6 @@ function (declare, _Widget, _WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixi
             this._paramsIdentify = new esri.tasks.IdentifyParameters();
             this._paramsIdentify.layerOption = "visible";
             this._paramsIdentify.returnGeometry = true;
-            this._paramsIdentify.tolerance = vh.awt.IDENTIFY_TOLERANCE;
 
             this._paramsSelect = new esri.tasks.IdentifyParameters();
             this._paramsSelect.layerOption = "visible";
@@ -147,11 +146,12 @@ function (declare, _Widget, _WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixi
         cmdNextExtent_onClick: function () {
             this._conf._navi.zoomToNextExtent();
         },
-        cmdTransparent_onChange: function (value) {
-            this._conf.dynamicLayer.setOpacity(value ? vh.awt.TRANSPARENT_DYNAMICLAYER : 1)
+        cmdTransparent_onClick: function () {
+            this.cmdTransparent.checked = !this.cmdTransparent.checked;
+            this._conf.dynamicLayer.setOpacity(this.cmdTransparent.checked ? vh.awt.TRANSPARENT_DYNAMICLAYER : 1)
         },
         cmdHelp_onClick: function () {
-            var win = window.open(vh.awt.URL_WEBSITE + "/help");
+            var win = window.open("help.html");
         },
         itmSwipe_onChange: function () {
             that._swipeX = undefined;
@@ -174,6 +174,9 @@ function (declare, _Widget, _WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixi
                 this._paramsIdentify.layerOption = "all";
                 this._paramsSelect.layerOption = "all";
             }
+        },
+        txtSelectTolerance_onChange: function (value) {
+            alert(value)
         },
         itmMeasureType_onChange: function () {
             if (this._conf._curTool.dojoAttachPoint == "toolMeasure") {
@@ -307,6 +310,7 @@ function (declare, _Widget, _WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixi
                     that.winMeasure.show();
                     break;
                 case "toolIdentify":
+                    this._paramsIdentify.tolerance = vh.awt.IDENTIFY_TOLERANCE;
                 case "toolSelect":
                     var params = (that._conf._curTool.dojoAttachPoint == "toolSelect") ? that._paramsSelect : that._paramsIdentify;
                     params.geometry = evt.geometry;

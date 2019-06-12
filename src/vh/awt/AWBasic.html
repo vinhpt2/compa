@@ -10,6 +10,8 @@
             <span group="select" data-dojo-type="dijit/RadioMenuItem" data-dojo-attach-point="itmSelectTop" data-dojo-attach-event="onChange:itmSelectType_onChange">Top Layer</span>
             <span group="select" data-dojo-type="dijit/RadioMenuItem" data-dojo-attach-point="itmSelectVisible" data-dojo-attach-event="onChange:itmSelectType_onChange" checked>Visible Layers</span>
             <span group="select" data-dojo-type="dijit/RadioMenuItem" data-dojo-attach-point="itmSelectAll" data-dojo-attach-event="onChange:itmSelectType_onChange">All Layers</span>
+            <span data-dojo-type="dijit/MenuSeparator"></span>
+            <span data-dojo-type="dijit/MenuItem">Tolerance <input data-dojo-type="dijit/form/NumberTextBox" data-dojo-attach-point="txtSelectTolerance" onchange="vh.awt.IDENTIFY_TOLERANCE=this.value" value="1" onclick="event.stopPropagation()" style="width:50px" /></span>
         </div>
     </div>
     <input type="button" data-dojo-type="dijit/form/Button" data-dojo-attach-point="cmdUnSelect" data-dojo-attach-event="onClick:cmdUnSelect_onClick" iconClass="unselect-png" title="Clear Select" showLabel="false"/>
@@ -26,7 +28,11 @@
     <div data-dojo-type="dijit/form/ComboButton" data-dojo-attach-point="toolSwipe" iconClass="swipe-png" title="Swipe" showLabel="false">
         <div data-dojo-type="dijit/Menu" data-dojo-attach-point="mnuSwipe"></div>
     </div>
-    <input type="button" data-dojo-type="dijit/form/ToggleButton" data-dojo-attach-point="cmdTransparent" data-dojo-attach-event="onChange:cmdTransparent_onChange" iconClass="transparent-png" title="Transparent" showLabel="false" />
+    <div data-dojo-type="dijit/form/ComboButton" data-dojo-attach-point="cmdTransparent" data-dojo-attach-event="onClick:cmdTransparent_onClick" iconClass="transparent-png" title="Transparent" showLabel="false">
+        <div data-dojo-type="dijit/Menu" data-dojo-attach-point="mnuTransparent">
+            <span data-dojo-type="dijit/MenuItem">Opacity <input data-dojo-type="dijit/form/NumberTextBox" data-dojo-attach-point="txtTransparent" onchange="vh.awt.TRANSPARENT_DYNAMICLAYER = this.value" value="0.2" onclick="event.stopPropagation()" style="width:50px" /></span>
+        </div>
+    </div>
     <span data-dojo-type="dijit/ToolbarSeparator"></span>
     <div type="button" data-dojo-type="dijit/form/ComboButton" data-dojo-attach-point="toolMeasure" iconClass="measure-png" title="Measure" showLabel="false">
         <div data-dojo-type="dijit/Menu">
