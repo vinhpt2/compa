@@ -1,4 +1,4 @@
-# yellowCOMPA <img src="src/vh/awt/css/logo48.png"/>
+# yellow COMPA <img src="src/vh/awt/css/logo48.png"/>
 <b>Advanced Web-map Editor Tools for Esri ArcGIS Javascript API</b><br />
 <a href="http://qldd.matmagoc.com:9000/compa/help.html" target="_blank"><b>H E L P</b></a><br/>
 <a href="http://qldd.matmagoc.com:9000/compa" target="_blank"><b>D E M O</b><br/><br/><img src='src/images/screen0.png'/></a><br/>
@@ -11,5 +11,5 @@
 <tr><td>2018 Copyright© - <i>Phạm Thế Vinh. All rights reserved.</i></td></tr>
 <tr><td><hr/></td></tr>
 <tr><td>Email: <i><a style="color:gold" href="mailto:vinhptfpt@gmail.com" target="_blank">vinhptfpt@gmail.com</i></td></tr>
-<tr><td>Edition <b>COMPA<i><sup> Pro.3x</sup> - <a href="http://yellowcompa.com/pro" target="_blank">http://yellowcompa.com/pro</a></i></b></td></tr>
+<tr><td>Edition <b>yellow COMPA<i><sup> Pro.3x</sup> - <a href="http://yellowcompa.com/pro" target="_blank">http://yellowcompa.com/pro</a></i></b></td></tr>
 </table>
