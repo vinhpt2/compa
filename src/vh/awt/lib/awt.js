@@ -71,7 +71,7 @@ function (Dialog, SimpleMarkerSymbol, SimpleLineSymbol, SimpleFillSymbol, TextSy
                     len += l;
                 }
             }
-            msg = "length=" + len.toFixed(2) + "m";
+            msg = "length=" + (len<1000?len.toFixed(2) + "m":(len/1000).toFixed(2) + "km");
             break;
         case "polygon":
             ps = geometry.rings[0];
@@ -82,7 +82,8 @@ function (Dialog, SimpleMarkerSymbol, SimpleLineSymbol, SimpleFillSymbol, TextSy
                     s += (ps[j][0] - ps[j - 1][0]) * (ps[j][1] + ps[j - 1][1]);
                 }
             }
-            msg = "area=" + Math.abs(s / 2).toFixed(2) + "m², length=" + len.toFixed(2) + "m";
+            var area=Math.abs(s / 2);
+            msg = "area=" + (area < 1000000 ? area.toFixed(2) + "m²" : (area / 1000000).toFixed(2) + "km²") + ", length=" + (len < 1000 ? len.toFixed(2) + "m" : (len / 1000).toFixed(2) + "km");
             break;
         }
         return msg;
