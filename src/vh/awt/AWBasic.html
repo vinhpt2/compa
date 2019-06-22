@@ -30,7 +30,7 @@
     </div>
     <div data-dojo-type="dijit/form/ComboButton" data-dojo-attach-point="cmdTransparent" data-dojo-attach-event="onClick:cmdTransparent_onClick" iconClass="transparent-png" title="Transparent" showLabel="false">
         <div data-dojo-type="dijit/Menu" data-dojo-attach-point="mnuTransparent">
-            <span data-dojo-type="dijit/MenuItem">Opacity <input data-dojo-type="dijit/form/NumberTextBox" data-dojo-attach-point="txtTransparent" onchange="vh.awt.TRANSPARENT_DYNAMICLAYER = this.value" value="0.2" onclick="event.stopPropagation()" style="width:50px" /></span>
+            <span data-dojo-type="dijit/MenuItem">Opacity <input data-dojo-type="dijit/form/NumberTextBox" data-dojo-attach-point="txtTransparent" onchange="vh.awt.TRANSPARENT_DYNAMICLAYER = this.value" value="0.25" onclick="event.stopPropagation()" style="width:50px" /></span>
         </div>
     </div>
     <span data-dojo-type="dijit/ToolbarSeparator"></span>
@@ -63,7 +63,7 @@
     </div>
 </div>
 
-<div data-dojo-type="dijit/Dialog" title="<img src='vh/awt/css/measure.png'/>&nbsp;Measure" data-dojo-attach-point="winMeasure" class="modaless">
+<div data-dojo-type="dijit/Dialog" title="<img src='vh/awt/css/measure.png'/>&nbsp;Measure" data-dojo-attach-point="winMeasure" data-dojo-attach-event="onCancel:winMeasure_onCancel" class="modaless">
     <div class="dijitDialogPaneContentArea">
         <label data-dojo-attach-point="labMeasure"></label>
     </div>

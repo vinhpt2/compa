@@ -153,6 +153,9 @@ function (declare, _Widget, _WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixi
         cmdHelp_onClick: function () {
             var win = window.open("help.html");
         },
+        winMeasure_onCancel: function () {
+            this._conf.map.graphics.clear();
+        },
         itmSwipe_onChange: function () {
             that._swipeX = undefined;
             that._swipeY = undefined;
@@ -269,6 +272,7 @@ function (declare, _Widget, _WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixi
                     break;
                 case "toolMeasure":
                     if (deactived) {
+                        that._conf.map.graphics.clear();
                         that.winMeasure.hide();
                         that._conf.draw.deactivate();
                         that._conf.map.setMapCursor("default");
@@ -306,6 +310,9 @@ function (declare, _Widget, _WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixi
 
             switch (that._conf._curTool.dojoAttachPoint) {
                 case "toolMeasure":
+                    that._conf.map.graphics.clear();
+                    var g = new esri.Graphic(evt.geometry, vh.awt.SYMB_MEASURE[evt.geometry.type]);
+                    that._conf.map.graphics.add(g);
                     that.labMeasure.innerHTML = vh.awt.calculateGeometryMsg(evt.geometry);
                     that.winMeasure.show();
                     break;

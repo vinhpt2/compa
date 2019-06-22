@@ -5,7 +5,7 @@ if (!vh.awt) vh.awt = {};
 vh.awt.URL_WEBSITE = "http://compa.awetool.com";
 vh.awt.URL_ARCGISONLINE_GEOMETRY_SERVICE = "https://tasks.arcgisonline.com/ArcGIS/rest/services/Geometry/GeometryServer";
 vh.awt.MAX_SELECT_FEATURE = 500;
-vh.awt.TRANSPARENT_DYNAMICLAYER = 0.2;
+vh.awt.TRANSPARENT_DYNAMICLAYER = 0.25;
 vh.awt.IDENTIFY_TOLERANCE = 1;//Đơn vị là pixel
 vh.awt.PRINT_TEMPLATES = [
     { name: "landscape-a4", url: "vh/awt/prints/landscape-a4.html" },
@@ -14,6 +14,12 @@ vh.awt.PRINT_TEMPLATES = [
 //Hàm toàn cục
 define(["dijit/Dialog","esri/symbols/SimpleMarkerSymbol","esri/symbols/SimpleLineSymbol","esri/symbols/SimpleFillSymbol","esri/symbols/TextSymbol","esri/symbols/Font"],
 function (Dialog, SimpleMarkerSymbol, SimpleLineSymbol, SimpleFillSymbol, TextSymbol, Font) {
+    vh.awt.SYMB_MEASURE = {//Symbol dùng khi measure
+        point: new SimpleMarkerSymbol(SimpleMarkerSymbol.STYLE_DIAMOND, 8, null, new dojo.Color([255, 127, 0])),
+        polyline: new SimpleLineSymbol(SimpleLineSymbol.STYLE_LONGDASH, new dojo.Color([255, 127, 0]), 2),
+        polygon: new SimpleFillSymbol(SimpleFillSymbol.STYLE_SOLID, new SimpleLineSymbol(SimpleLineSymbol.STYLE_LONGDASH, new dojo.Color([255, 127, 0]), 2), new dojo.Color([255, 127, 0, 0.25]))
+    }
+
     vh.awt.SYMB_HIGHLIGHT = {//Symbol dùng khi highlight
         point: new SimpleMarkerSymbol(SimpleMarkerSymbol.STYLE_SQUARE, 6, null, new dojo.Color([255, 255, 0])),
         polyline: new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID, new dojo.Color([255, 255, 0]), 2),
