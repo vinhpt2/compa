@@ -26,7 +26,6 @@ function (declare, _Widget, _WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixi
         iconClass: "awsnap-png",
         title: "AWSnap Tools",
 
-        //conf{map, dynamicLayer, graphicLayer, graphicLayerSketch}
         constructor: function (conf, refNode) {
             this.inherited(arguments);
 
