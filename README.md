@@ -1,7 +1,6 @@
 # yellow COMPA <img src="src/vh/awt/css/logo48.png"/>
-<b>Advanced Web-map Editor Tools</b><br />
 <a target="_blank"><b>H E L P</b></a><br/>
-<a target="_blank"><b>D E M O</b><br/><br/></a><br/>
+<a target="_blank"><b>D E M O</b></a><br/>
 <table>
 <tr><td rowspan="9" align="center"><a href="http://yellowcompa.com" target="_blank"><img src="src/vh/awt/css/logo96.png"/><br/><i>http://yellowcompa.com</i></a></td><td><h3 style="background-color:gold">&nbsp;<a href="http://yellowcompa.com/ce" target="_blank">yellow COMPA</a><i><sup> ce.3x</sup> - v1.0.β</i></h3></td></tr>
 <tr><td><hr/></td></tr>
