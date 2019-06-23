@@ -39,7 +39,6 @@ function (declare, _Widget, _WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixi
         iconClass: "awbasic-png",
         title: "AWBasic Tools",
 
-        //conf{map, draw, dynamicLayer, graphicLayer, printTemplates}
         constructor: function (conf, refNode) {
             this.inherited(arguments);
             that = this;
