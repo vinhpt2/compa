@@ -1,4 +1,4 @@
-# ArcGIS Web Advanced Editor tool - COMPA <img src="src/vh/awt/css/logo48.png"/>
+# Advanced ArcGIS for Javascript Editor tools - COMPA <img src="src/vh/awt/css/logo48.png"/>
 <a target="_blank"><b>H E L P</b></a><br/>
 <a target="_blank"><b>D E M O</b></a><br/>
 <table>
